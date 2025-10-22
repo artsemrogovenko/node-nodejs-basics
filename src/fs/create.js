@@ -7,7 +7,7 @@ const failedMessage = "FS operation failed";
 const create = async () => {
   try {
     isNotExistFile();
-    writeFile(fileName, content, { signal }, (err) => {
+    writeFile(fileName, content, { encoding: "utf-8" }, (err) => {
       if (err) console.log(err);
     });
   } catch (error) {
