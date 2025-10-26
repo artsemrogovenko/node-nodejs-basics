@@ -1,6 +1,10 @@
+import { fork } from "node:child_process";
+import { stdout,stdin} from 'node:process';
+
 const spawnChildProcess = async (args) => {
-  // Write your code here
+  const modulePath='src/cp/files/script.js'
+  fork(modulePath,args)
 };
 
 // Put your arguments in function call to test this functionality
-spawnChildProcess( /* [someArgument1, someArgument2, ...] */);
+spawnChildProcess( ['rs', 'node', 2025] );
